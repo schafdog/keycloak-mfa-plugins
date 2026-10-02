@@ -80,6 +80,7 @@ public class AppSetupActionTokenHandler extends AbstractActionTokenHandler<AppSe
 			return Response.status(400).build();
 		}
 
+		@SuppressWarnings("rawtypes")
 		CredentialProvider appCredentialProvider = tokenContext.getSession().getProvider(
 			CredentialProvider.class,
 			AppCredentialProviderFactory.PROVIDER_ID

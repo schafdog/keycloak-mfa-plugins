@@ -17,6 +17,7 @@ public class AppAuthActionToken extends DefaultActionToken {
 		this.originalAuthenticationSessionId = compoundAuthenticationSessionId;
 	}
 
+	@SuppressWarnings("unused")
 	private AppAuthActionToken() {
 		// Required to deserialize from JWT
 		super();
