@@ -16,7 +16,6 @@ import java.net.URI;
 
 public class ActionTokenUtil {
 
-	@SuppressWarnings("unused")
 	final static private Logger logger = Logger.getLogger(ActionTokenUtil.class);
 
 	public static AuthenticationSessionModel getOriginalAuthSession(KeycloakSession session, RealmModel realm, String originalAuthSessionId) {
@@ -36,7 +35,7 @@ public class ActionTokenUtil {
 			final String clientId = authSession.getClient().getClientId();
 			DefaultActionToken token = (DefaultActionToken) actionTokenClass.getDeclaredConstructor(String.class, Integer.class, String.class, String.class).newInstance(
 				user.getId(),
-				Time.currentTimeSeconds() + realm.getActionTokenGeneratedByUserLifespan(),
+				Time.currentTime() + realm.getActionTokenGeneratedByUserLifespan(),
 				AuthenticationSessionCompoundId.fromAuthSession(authSession).getEncodedId(),
 				clientId
 			);
