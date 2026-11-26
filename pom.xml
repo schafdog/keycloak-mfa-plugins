@@ -20,13 +20,13 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<keycloak.version>26.8.0</keycloak.version>
-		<maven.compiler.release>17</maven.compiler.release>
-		<maven.compiler.version>3.16.0</maven.compiler.version>
+		<keycloak.version>26.8.2</keycloak.version>
+		<maven.compiler.release>21</maven.compiler.release>
+		<maven.compiler.version>3.6.2</maven.compiler.version>
 		<maven.shade.version>3.6.2</maven.shade.version>
 		<maven.surefire.version>3.6.1</maven.surefire.version>
 		<!-- keep in sync with the version used by keycloak -->
-		<quarkus.version>3.40.1</quarkus.version>
+		<quarkus.version>4.0.0</quarkus.version>
 	</properties>
 
 	<dependencyManagement>
